@@ -47,3 +47,23 @@ describe('Runner factorial cases', () => {
     expect(runner('20-10*10/5-3+3!')).toEqual(3);
   });
 });
+
+describe('Runner power cases', () => {
+  it('4^3-5', () => {
+    expect(runner('4^3-5')).toEqual(59);
+  });
+
+  it('2^5-32+3!', () => {
+    expect(runner('2^5-32+3!')).toEqual(6);
+  });
+});
+
+describe('Runner squaring cases', () => {
+  it('4**+5', () => {
+    expect(runner('4**+5')).toEqual(21);
+  });
+
+  it('32-2**', () => {
+    expect(runner('32-2**')).toEqual(28);
+  });
+});
