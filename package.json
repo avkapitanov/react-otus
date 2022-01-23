@@ -2,10 +2,12 @@
   "name": "react-calc-hw01",
   "version": "1.0.0",
   "description": "Homework 01",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "calc": "npx ts-node src"
+    "test": "npx jest",
+    "calc": "npx ts-node src",
+    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
+    "check": "npm test && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
+    "babel-jest": "^27.4.6",
     "babel-loader": "^8.2.3",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
