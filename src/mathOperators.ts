@@ -40,7 +40,7 @@ export const mathOperators: {
   '!': factorial,
 };
 
-export const mathPriorities: number[] = [1, 2, 3, 4];
+export const mathPriorities: [1, 2, 3, 4] = [1, 2, 3, 4];
 
 const [FIRST, SECOND, THIRD, FOURTH] = mathPriorities;
 

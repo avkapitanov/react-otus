@@ -4,10 +4,10 @@
   "description": "Homework 01",
   "main": "index.ts",
   "scripts": {
-    "test": "npx jest",
-    "calc": "npx ts-node src",
-    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
-    "check": "npm test && npm run lint"
+    "test": "jest",
+    "calc": "ts-node src",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix ./",
+    "check": "test && npm run lint"
   },
   "repository": {
     "type": "git",
