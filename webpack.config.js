@@ -24,12 +24,15 @@ const config = {
       {
         test: /\.(ts|tsx|js)$/i,
         loader: 'babel-loader',
-        exclude: ['/node_modules/'],
+        exclude: /node_modules/,
       },
     ],
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
   devtool: 'source-map',
 };

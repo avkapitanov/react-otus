@@ -10,6 +10,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -21,7 +22,12 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true }],
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+      },
+    ],
     'react/prop-types': 0,
   },
   overrides: [

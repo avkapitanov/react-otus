@@ -4,16 +4,29 @@
   "description": "Game of Life",
   "main": "index.ts",
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@storybook/addon-actions": "^6.4.18",
+    "@storybook/addon-essentials": "^6.4.18",
+    "@storybook/addon-links": "^6.4.18",
+    "@storybook/builder-webpack5": "^6.4.18",
+    "@storybook/manager-webpack5": "^6.4.18",
+    "@storybook/react": "^6.4.18",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.2",
     "babel-jest": "^27.4.6",
     "babel-loader": "^8.2.3",
     "eslint": "^8.7.0",
@@ -21,8 +34,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.5.6",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",
+    "loki": "^0.28.1",
     "prettier": "^2.5.1",
     "typescript": "^4.5.5",
     "webpack": "^5.67.0",
@@ -32,7 +47,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack serve --entry ./src/index.tsx",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix ./"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix ./",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "loki:update": "npm run build-storybook && npx loki update --requireReference --reactUri file:./storybook-static",
+    "loki:approve": "npx loki approve",
+    "test:loki": "npm run build-storybook && npx loki --requireReference --reactUri file:./storybook-static"
   },
   "repository": {
     "type": "git",
@@ -43,5 +63,20 @@
   "bugs": {
     "url": "https://github.com/avkapitanov/react-otus/issues"
   },
-  "homepage": "https://github.com/avkapitanov/react-otus#readme"
+  "homepage": "https://github.com/avkapitanov/react-otus#readme",
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
+  }
 }
