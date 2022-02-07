@@ -5,6 +5,6 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/settings/JestSetup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sss|styl)$': '<rootDir>/node_modules/jest-css-modules',
+    '\\.(css|scss)$': '<rootDir>/node_modules/jest-css-modules',
   },
 };
