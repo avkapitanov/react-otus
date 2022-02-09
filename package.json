@@ -51,6 +51,7 @@
   "scripts": {
     "test": "jest",
     "serve": "webpack serve --entry ./src/index.tsx",
+    "build": "webpack --mode production",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix ./",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
