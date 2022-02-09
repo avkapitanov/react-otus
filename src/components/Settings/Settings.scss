@@ -1,0 +1,10 @@
+.settings-block {
+  margin-bottom: 20px;
+  width: 300px;
+
+  &__param {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
