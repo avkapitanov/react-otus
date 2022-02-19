@@ -3,12 +3,11 @@
 // Нужно заменить FIXME на правильный тип
 import React from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type FIXME = React.ComponentType["defaultProps"] | undefined;
+type FIXME<T> = T extends { defaultProps: infer P } ? P : unknown;
 
 // Hint: infer
 export const getDefaultProps = <T>(
   component: React.ComponentType<T>
-): FIXME => {
+): FIXME<React.ComponentType<T>> => {
   return component.defaultProps;
 };

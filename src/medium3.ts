@@ -1,13 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type productionStates = "buyingSupplies" | "producing";
+type productionStates = 'buyingSupplies' | 'producing';
 type FIXME = Exclude<OrderState[], productionStates>;
 
 const orderStates = [
-  "initial",
-  "inWork",
-  "buyingSupplies",
-  "producing",
-  "fullfilled",
+  'initial',
+  'inWork',
+  'buyingSupplies',
+  'producing',
+  'fullfilled',
 ] as const;
 
 type OrderState = typeof orderStates[number];
@@ -15,5 +15,5 @@ type OrderState = typeof orderStates[number];
 // Hint: type guards
 export const getUserOrderStates = (orderStates: OrderState[]): FIXME =>
   orderStates.filter(
-    (state) => state !== "buyingSupplies" && state !== "producing"
+    (state) => state !== 'buyingSupplies' && state !== 'producing'
   );
