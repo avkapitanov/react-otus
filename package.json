@@ -1,0 +1,35 @@
+{
+  "name": "React otus TS2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc --noEmit",
+    "lint": "eslint --ext .ts,.tsx --fix ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avkapitanov/react-otus.git"
+  },
+  "author": "Artem Kapitanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avkapitanov/react-otus/issues"
+  },
+  "homepage": "https://github.com/avkapitanov/react-otus#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.39",
+    "react": "^17.0.2"
+  }
+}
