@@ -1,7 +1,12 @@
 .person-list {
   margin: 0;
-  
+  width: fit-content;
+
   &__item {
     cursor: pointer;
+  }
+
+  &--empty {
+    width: fit-content;
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Timer.scss';
 
 type TimerState = {
   secondsCount: number;
@@ -44,7 +45,13 @@ class Timer extends Component<TimerProps, TimerState> {
     const { isVisible } = this.props;
     const { secondsCount } = this.state;
 
-    return isVisible && <div data-testid="timer">{secondsCount}</div>;
+    return (
+      isVisible && (
+        <div className="timer-block" data-testid="timer">
+          {secondsCount}
+        </div>
+      )
+    );
   }
 }
 

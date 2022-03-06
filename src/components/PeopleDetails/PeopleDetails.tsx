@@ -28,6 +28,10 @@ class PeopleDetails extends Component<PeopleDetailsProps, PeopleDetailsState> {
     this.updatePerson = this.updatePerson.bind(this);
   }
 
+  componentDidMount() {
+    this.updatePerson();
+  }
+
   componentDidUpdate(prevProps: PeopleDetailsProps) {
     if (this.props.personId !== prevProps.personId) {
       this.updatePerson();
@@ -52,7 +56,7 @@ class PeopleDetails extends Component<PeopleDetailsProps, PeopleDetailsState> {
     if (!person) {
       return (
         <div
-          className="react-hw04__sw-data-details--empty"
+          className="react-hw04__sw-data-details--empty people-details people-details--empty"
           data-testid="empty-person"
         >
           Никто не выбран
