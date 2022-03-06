@@ -19,10 +19,6 @@ export type PeopleListProps = {
 };
 
 export class PeopleList extends Component<PeopleListProps, PeopleListState> {
-  constructor(props: PeopleListProps) {
-    super(props);
-  }
-
   render() {
     const { people, onClickHandler } = this.props;
     return (
@@ -37,6 +33,7 @@ export class PeopleList extends Component<PeopleListProps, PeopleListState> {
                 className="person-list__item"
                 key={item.id}
                 onClick={() => onClickHandler(item.id)}
+                data-testid="person-item"
               >
                 {item.name} {item.gender}
               </li>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 
 import { Counter } from './Counter';
 
@@ -9,6 +10,9 @@ describe('Counter', () => {
 
     const emptyCounter = screen.getByTestId('empty-counter');
     expect(emptyCounter).toBeInTheDocument();
+
+    const empty = renderer.create(<Counter loadedPeople={0} />).toJSON();
+    expect(empty).toMatchSnapshot();
   });
 
   it('renders with loaded elements component', () => {
@@ -16,5 +20,8 @@ describe('Counter', () => {
 
     const loadedCounter = screen.getByTestId('with-loaded');
     expect(loadedCounter).toBeInTheDocument();
+
+    const loaded = renderer.create(<Counter loadedPeople={5} />).toJSON();
+    expect(loaded).toMatchSnapshot();
   });
 });

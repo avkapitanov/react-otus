@@ -13,7 +13,7 @@ type AppState = {
   people: Array<IPeople>;
 };
 
-type AppProps = Record<string, never>;
+type AppProps = {};
 
 class App extends Component<AppProps, AppState> {
   constructor(props: AppProps) {

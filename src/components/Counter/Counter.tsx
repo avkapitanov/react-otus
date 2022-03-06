@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import './Counter.scss';
 
-type CounterProps = {
+export type CounterProps = {
   loadedPeople: number;
 };
 
-class Counter extends Component<CounterProps> {
-  constructor(props: CounterProps) {
-    super(props);
-  }
-
+export class Counter extends Component<CounterProps> {
   render() {
     const { loadedPeople } = this.props;
 
@@ -31,5 +27,3 @@ class Counter extends Component<CounterProps> {
     );
   }
 }
-
-export { Counter, CounterProps };

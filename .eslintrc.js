@@ -29,6 +29,21 @@ module.exports = {
       },
     ],
     'react/prop-types': 0,
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        types: {
+          String: true,
+          Boolean: true,
+          Number: true,
+          Symbol: true,
+          Function: true,
+          Object: true,
+          '{}': false,
+        },
+        extendDefaults: true,
+      },
+    ],
   },
   overrides: [
     {

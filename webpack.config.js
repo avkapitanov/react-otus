@@ -22,7 +22,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx|js)$/i,
+        test: /\.(t|j)sx?$/i,
         loader: 'babel-loader',
         exclude: /node_modules/,
       },

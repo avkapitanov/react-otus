@@ -9,7 +9,7 @@ export type TimerProps = {
   isVisible: boolean;
 };
 
-class Timer extends Component<TimerProps, TimerState> {
+export class Timer extends Component<TimerProps, TimerState> {
   intervalId: number;
 
   constructor(props: TimerProps) {
@@ -36,9 +36,9 @@ class Timer extends Component<TimerProps, TimerState> {
   }
 
   incrementTime() {
-    this.setState((prevState) => {
-      return { secondsCount: prevState.secondsCount + 1 };
-    });
+    this.setState((prevState) => ({
+      secondsCount: prevState.secondsCount + 1,
+    }));
   }
 
   render() {
@@ -54,5 +54,3 @@ class Timer extends Component<TimerProps, TimerState> {
     );
   }
 }
-
-export { Timer };

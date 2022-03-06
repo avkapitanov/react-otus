@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import { PeopleList } from './PeopleList';
 
@@ -27,5 +27,9 @@ describe('PeopleList', () => {
 
     const loadedList = screen.getByTestId('with-loaded');
     expect(loadedList).toBeInTheDocument();
+
+    const firstItem = screen.getByTestId('person-item');
+    fireEvent.click(firstItem);
+    expect(clickHandler).toHaveBeenCalled();
   });
 });
