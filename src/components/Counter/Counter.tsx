@@ -15,7 +15,12 @@ class Counter extends Component<CounterProps> {
 
     if (loadedPeople == 0) {
       return (
-        <div data-testid="empty">Пока не загружено ни одного персонажа</div>
+        <div
+          className="react-hw04__sw-counter react-hw04__sw-counter--empty"
+          data-testid="empty"
+        >
+          Пока не загружено ни одного персонажа
+        </div>
       );
     }
 

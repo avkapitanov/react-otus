@@ -39,7 +39,9 @@ export class PeopleList extends Component<PeopleListProps, PeopleListState> {
             ))}
           </ul>
         ) : (
-          <p data-testid="empty">Нет данных</p>
+          <p className="react-hw04__sw-data-list--empty" data-testid="empty">
+            Нет данных
+          </p>
         )}
       </>
     );
