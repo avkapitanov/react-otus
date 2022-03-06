@@ -9,7 +9,7 @@ describe('PeopleList', () => {
   it('renders Empty component', () => {
     render(<PeopleList people={[]} onClickHandler={clickHandler} />);
 
-    const emptyList = screen.getByTestId('empty');
+    const emptyList = screen.getByTestId('empty-list');
     expect(emptyList).toBeInTheDocument();
   });
 

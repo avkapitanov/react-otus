@@ -33,13 +33,20 @@ export class PeopleList extends Component<PeopleListProps, PeopleListState> {
             data-testid="with-loaded"
           >
             {people.map((item) => (
-              <li key={item.id} onClick={() => onClickHandler(item.id)}>
+              <li
+                className="person-list__item"
+                key={item.id}
+                onClick={() => onClickHandler(item.id)}
+              >
                 {item.name} {item.gender}
               </li>
             ))}
           </ul>
         ) : (
-          <p className="react-hw04__sw-data-list--empty" data-testid="empty">
+          <p
+            className="react-hw04__sw-data-list--empty"
+            data-testid="empty-list"
+          >
             Нет данных
           </p>
         )}

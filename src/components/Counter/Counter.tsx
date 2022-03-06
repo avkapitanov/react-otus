@@ -17,7 +17,7 @@ class Counter extends Component<CounterProps> {
       return (
         <div
           className="react-hw04__sw-counter react-hw04__sw-counter--empty"
-          data-testid="empty"
+          data-testid="empty-counter"
         >
           Пока не загружено ни одного персонажа
         </div>

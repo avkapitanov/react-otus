@@ -1,3 +1,7 @@
 .person-list {
   margin: 0;
+  
+  &__item {
+    cursor: pointer;
+  }
 }

@@ -7,7 +7,7 @@ describe('Counter', () => {
   it('renders Empty component', () => {
     render(<Counter loadedPeople={0} />);
 
-    const emptyCounter = screen.getByTestId('empty');
+    const emptyCounter = screen.getByTestId('empty-counter');
     expect(emptyCounter).toBeInTheDocument();
   });
 
