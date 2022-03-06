@@ -4,6 +4,9 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { PeopleDetails } from './PeopleDetails';
 import { StateMock } from '@react-mock/state';
 
+import { enableFetchMocks } from 'jest-fetch-mock';
+enableFetchMocks();
+
 describe('PeopleDetails', () => {
   it('renders Empty PeopleDetails component', () => {
     render(<PeopleDetails personId={0} />);
