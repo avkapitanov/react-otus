@@ -10,11 +10,6 @@ export default {
 
 const Template: Story<TimerProps> = (args) => <Timer {...args} />;
 
-export const NotVisibleTimer = Template.bind({});
-NotVisibleTimer.args = {
-  isVisible: false,
-};
-
 export const VisibleTimer = Template.bind({});
 VisibleTimer.args = {
   isVisible: true,
