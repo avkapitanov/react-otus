@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter renders Empty component 1`] = `
+<div
+  className="react-hw04__sw-counter react-hw04__sw-counter--empty"
+  data-testid="empty-counter"
+>
+  Пока не загружено ни одного персонажа
+</div>
+`;
+
+exports[`Counter renders with loaded elements component 1`] = `
+<div
+  className="react-hw04__sw-counter"
+  data-testid="with-loaded"
+>
+  Загружено персонажей: 
+  5
+</div>
+`;

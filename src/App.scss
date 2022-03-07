@@ -1,0 +1,29 @@
+.react-hw04 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+}
+
+.react-hw04__timer {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 40px;
+}
+
+.react-hw04__button {
+  margin-right: 30px;
+}
+
+.react-hw04__sw-data {
+  display: flex;
+}
+
+.react-hw04__sw-data-list--empty {
+  margin: 0;
+}
+
+.react-hw04__sw-data-details--empty {
+  margin-left: 30px;
+}

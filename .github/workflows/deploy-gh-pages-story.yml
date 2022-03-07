@@ -1,0 +1,29 @@
+name: Deploy to GithubPages Storybook
+
+on:
+  push:
+    branches:
+      - react-hw04
+
+jobs:
+  deploy-to-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Packages
+        run: |
+          npm install
+      - name: Build
+        run: |
+          npm run build-storybook
+      - name: Deploy
+
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: storybook-static
+          TARGET_FOLDER: storybook
+          CLEAN: true
